@@ -5,7 +5,9 @@ services:
    dockerfile: Dockerfile.tensorrt
   command: [ 'python', 'facefusion.py', 'run', '--execution-providers', 'tensorrt' ]
   volumes:
-  - /mnt/user/appdata/facefusion:/facefusion/
+  - .assets:/facefusion/.assets
+  - .caches:/facefusion/.caches
+  - .jobs:/facefusion/.jobs
   ports:
   - 7875:7860
   deploy:
