@@ -7,8 +7,8 @@ services:
   volumes:
   - .assets:/facefusion/.assets
   - .caches:/facefusion/.caches
-  - .jobs:/mnt/user/appdata/facefusion/.jobs
-  - /tmp:/mnt/user/appdata/facefusion/completed
+  - /mnt/user/appdata/facefusion/.jobs:/facefusion/.jobs
+  - /mnt/user/appdata/facefusion/completed:/tmp
   ports:
   - 7875:7860
   deploy:
