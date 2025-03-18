@@ -6,8 +6,9 @@ services:
   command: [ 'python', 'facefusion.py', 'run', '--execution-providers', 'tensorrt' ]
   volumes:
   - .assets:/mnt/user/appdata/facefusion/.assets
-  - .caches:/mnt/user/appdata/facefusion/.caches
+  - .caches:/facefusion/.caches
   - .jobs:/mnt/user/appdata/facefusion/.jobs
+  - /completed:/mnt/user/appdata/facefusion/completed
   ports:
   - 7875:7860
   deploy:
