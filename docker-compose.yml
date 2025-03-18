@@ -5,7 +5,7 @@ services:
    dockerfile: Dockerfile.tensorrt
   command: [ 'python', 'facefusion.py', 'run', '--execution-providers', 'tensorrt' ]
   volumes:
-  - .assets:/mnt/user/appdata/facefusion/.assets
+  - .assets:/facefusion/.assets
   - .caches:/facefusion/.caches
   - .jobs:/mnt/user/appdata/facefusion/.jobs
   - /completed:/mnt/user/appdata/facefusion/completed
